@@ -1,0 +1,15 @@
+{% load static %}
+
+<link rel ="stylesheet" href="{% static 'style.css' %}">
+
+<h1>Word Counter Application</h1>
+<br><br>
+
+<div style="width:800px; margin:0 auto;">
+    <h3>Input the paragraph below</h3>
+    <form method="POST" action="counter">
+        {% csrf_token %}
+        <textarea name = "input" rows = "30" cols = "100"></textarea><br>
+        <input type = "submit"/>
+    </form>
+</div>
